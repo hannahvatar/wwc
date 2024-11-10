@@ -183,15 +183,23 @@ h1 {
 }
 
 button{
-  border-style: none;
-  height: 60px;
-  background: none;
-  border: 2px solid #FFBE00;
-  padding: 0 60px;
-  color: #FFBE00;
-  font-size: 24px;
-  outline: none;
-  border-radius: 50px 0;
+  outline:none;
+  box-shadow:none;
+  border:none;
+  font-size:24px;
+  padding: 18px 60px;
+  margin: 16px;
+  overflow:hidden;
+  background: #FFBE00;
+  color:#1b2ac7;
+  clip-path:polygon(
+  2px 36px,
+  37px 2px,
+  calc(100% - 2px) 2px,
+  calc(100% - 2px) calc(100% - 36px),
+  calc(100% - 36px) calc(100% - 2px),
+  2px calc(100% - 2px),
+  2px 36px);
   transition: background-color 0.3s ease; /* Smooth transition for background */
 }
 
