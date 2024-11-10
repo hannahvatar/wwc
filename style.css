@@ -50,7 +50,14 @@ body::before {
   }
 }
 
+
+
 /* Define the h1 */
+
+h1 {
+  margin-top: 40px;
+  padding: 40px;
+}
 
 .my_title {
   font-family: "Caprasimo", serif;
@@ -101,34 +108,46 @@ body::before {
 
 /* z-index container for cards */
 
-.overlay {
+/* Keep the absolute positioning to place the cards over the title */
+
+.container-card-01 {
   position: absolute;
-  top: -20%;
+  top: 60%;  /* Adjust the top property as needed to position the overlay */
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centers cards horizontally */
+  padding: 20px;
+
+
+}
+
+.container-card-02 {
+  position: absolute;
+  top: 20%;  /* Adjust the top property as needed to position the overlay */
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* Centers cards horizontally */
+  padding: 20px;
 }
 
 
-/* spinning cards css */
-
+/* Spinning cards CSS */
 .spin-card {
-  transform-origin: center center; /* Default */
+  transform-origin: center center;
   height: 220px;
   width: 280px;
   border-radius: 16px;
   position: relative;
   animation: spin 5s infinite linear;
   transform-style: preserve-3d;
-  margin: 0;
-
   /* Remove border */
-  border: none; /* Set border to none to prevent any unwanted border display */
-  box-shadow: none; /* Ensure no shadow is applied, which could also appear as a border */
+  border: none;
+  box-shadow: none;
+
 }
 
 .front,
@@ -147,11 +166,39 @@ body::before {
   transform: rotateY(180deg);
 }
 
-/* Define the animation */
+/* Define the spinning animation */
 @keyframes spin {
   100% {
     transform: rotateY(360deg);
   }
+}
+
+/* navigation */
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-right: 32px;
+}
+
+button{
+  border-style: none;
+  height: 60px;
+  background: none;
+  border: 2px solid #FFBE00;
+  padding: 0 60px;
+  color: #FFBE00;
+  font-size: 24px;
+  outline: none;
+  border-radius: 50px 0;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.button:hover {
+  background-color: rgba(255, 190, 0, 0.20);
+  border-color: rgba(255, 190, 0, 0.20);
+  color: #FFBE00;
 }
 
 
