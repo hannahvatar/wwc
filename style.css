@@ -545,47 +545,32 @@ p {
 /* Define the footer*/
 
 footer {
-display: flex;
-flex-wrap: wrap;
-justify-content: s;
-margin: 0 auto;
-margin-bottom: 8%;
-width: 80%;
-}
-
-@media (max-width: 576px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.f-bloc {
+  margin: 4em auto; /* This centers the div horizontally */
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: .5em;
+  justify-content: space-between;
+  width: 80%;
+  gap: 2em;
 
-  }
+}
 
 footer a {
+  color:white;
   font-family: "Noto Serif", serif;
-  font-weight: 200;
   font-size: 14px;
-  color: white;
-  margin: .5em;
-  text-decoration: none;
-  width: 100%;
-
-
-
+  font-weight: 200;
 }
 
 footer a:hover {
-
   opacity: 40%;
 
+}
+
+.footer-item {
+  display: flex;
+
+  flex-direction: column;
+  flex: 1;
+  gap: 1em; /* Adds space between links */
+  text-align: left; /* Centers the text within each item */
 }
