@@ -547,11 +547,17 @@ p {
 footer {
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+justify-content: s;
 margin: 0 auto;
 margin-bottom: 8%;
-width: 80%
+width: 80%;
+}
 
+@media (max-width: 576px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .f-bloc {
@@ -560,6 +566,8 @@ width: 80%
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-grow: 1;
+  flex-shrink: 1;
+  padding: .5em;
 
   }
 
@@ -568,8 +576,12 @@ footer a {
   font-weight: 200;
   font-size: 14px;
   color: white;
-  margin: .26em;
+  margin: .5em;
   text-decoration: none;
+  width: 100%;
+
+
+
 }
 
 footer a:hover {
