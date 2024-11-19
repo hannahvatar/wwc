@@ -4,11 +4,27 @@ body {
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom left, #1b2ac7, #FF786E);
-  animation: gradientAnimation 5s ease infinite;
+  animation: gradientAnimation 7s ease infinite;
   background-size: 200% 200%;
   /* Expands the gradient area to enable smooth transitions */
-
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 
 body::before {
   content: '';
