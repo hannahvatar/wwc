@@ -297,6 +297,9 @@ p {
 
 }
 
+/* //////////////////////////////////////////////////////////////////////// */
+
+
 /* z-index container for cards */
 
 .container-card-01 {
@@ -304,7 +307,7 @@ p {
   display: flex;
 	justify-content: center;
 	align-content: center;
-  top: 10%;
+
   /* Adjust the top property as needed to position the overlay */
   left: 0;
   width: 100%;
@@ -315,7 +318,7 @@ p {
   /* Centers cards horizontally */
 
 }
-
+/*
 @media (max-width: 576px) {
   .container-card-01 {
     display: flex;
@@ -324,7 +327,15 @@ p {
   }
 
 }
+*/
 
+@media (max-width: 576px) {
+  .container-card-01 {
+    display: none;
+  }
+    /* Small Mobile (Portrait) */
+
+}
 .container-card-02 {
   position: absolute;
   display: flex;
@@ -336,7 +347,7 @@ p {
   width: 100%;
   height: 100%;
   z-index: 2;
-  margin:0px;
+  margin: 0px;
   gap: 20px
   /* Centers cards horizontally */
 
@@ -363,14 +374,9 @@ p {
   /* Remove border */
   border: none;
   box-shadow: none;
+  margin: 0px;
 }
 
-@media (max-width: 576px) {
-  .spin-card-01-01 {
-    margin-bottom: 80px;
-  }
-
-}
 
 .spin-card-01-02 {
   transform-origin: center center;
@@ -383,6 +389,7 @@ p {
   /* Remove border */
   border: none;
   box-shadow: none;
+  margin: 0px;
 
 }
 
@@ -397,6 +404,7 @@ p {
   /* Remove border */
   border: none;
   box-shadow: none;
+  margin: 0px;
 
 }
 
@@ -411,6 +419,7 @@ p {
   /* Remove border */
   border: none;
   box-shadow: none;
+  margin: 0px;
 
 }
 
@@ -477,19 +486,18 @@ p {
 
 .rotating-container {
   position: absolute;
-  top: 50%;          /* Center vertically */
-  left: 50%;         /* Center horizontally */
-  transform-origin: center center;
-  transform: translate(-50%, -50%); /* Adjust for true centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Always center the container */
   width: 100%;
-  height: 100vh;     /* Use viewport height instead of padding */
+  height: 100%;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: rotateOverlay 30s linear infinite;
-
 }
+
 
 @keyframes rotateOverlay {
   0% {
